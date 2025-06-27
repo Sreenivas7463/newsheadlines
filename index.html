@@ -32,6 +32,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#" id="morenews">More Headlines</a></li>
 	      <li><a class="dropdown-item" href="#" id="cinegallery">Cinema Gallery</a></li>
+	      <li><a class="dropdown-item" href="#" id="cricnews">Cricket News</a></li>	    
               <li><a class="dropdown-item" href="#" id="entertainment">Entertainment</a></li>
               <li><a class="dropdown-item" href="#" id="entertainmentmore">More in Entertainment</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -101,6 +102,33 @@ axios.get('https://sreenewsapi.vercel.app', {
 						    console.log(error);
 						});
           })
+
+	 $('#cricnews').click(function(){ 
+
+      axios.get('https://sreenewsapi.vercel.app/cricnews', {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json;charset=UTF-8",
+    },}).then(function (response) {
+    	                   $('#contentdisplay').html('');
+                        console.log(response.data);
+                        for(var i=0; i<response.data.length; i++)
+                        {  
+                             var contentd = '<div class="col-md-4"><div class="card my-3"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h5 class="text-dark fs-4 mb-2">'+response.data[i]['title']+'</h5></a></div>'
+
+                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div></div>';
+							 
+							 $('#contentdisplay').append(contentd);
+                        }
+                        
+						    
+                        
+						})
+						.catch(function (error) {
+						    console.log(error);
+						});
+    })
+
 
     $('#tech').click(function(){ 
 
