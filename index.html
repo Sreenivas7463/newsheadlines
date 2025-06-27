@@ -46,18 +46,8 @@
 </header>
   
 <div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-2">
-     
-    </div>
-    <div class="col-sm-8">
-      
-      <div id="contentdisplay"></div>
-     
-    </div>
-    <div class="col-sm-2">
-      
-    </div>
+  <div class="row" id="contentdisplay">
+  
   </div>
 </div>
 <script type="text/javascript">
@@ -73,9 +63,9 @@ $(document).ready(function(){
                         console.log(response.data);
                         for(var i=0; i<response.data.length; i++)
                         {  
-                             var contentd = '<div class="card my-3"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
+                             var contentd = '<div class="card my-3"><div class="col-md-4"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
 
-                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div>';
+                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div></div>';
 							 
 							 $('#contentdisplay').append(contentd);
                         }
@@ -97,9 +87,9 @@ axios.get('https://sreenewsapi.vercel.app', {
                         console.log(response.data);
                         for(var i=0; i<response.data.length; i++)
                         {  
-                             var contentd = '<div class="card my-3"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
+                             var contentd = '<div class="card my-3"><div class="col-md-4"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
 
-                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div>';
+                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div></div>';
 							 
 							 $('#contentdisplay').append(contentd);
                         }
@@ -123,9 +113,9 @@ axios.get('https://sreenewsapi.vercel.app', {
                         console.log(response.data);
                         for(var i=0; i<response.data.length; i++)
                         {  
-                             var contentd = '<div class="card my-3"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
+                             var contentd = '<div class="card my-3"><div class="col-md-4"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
 
-                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div>';
+                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div></div>';
 							 
 							 $('#contentdisplay').append(contentd);
                         }
@@ -149,9 +139,9 @@ Accept: "application/json",
                   console.log(response.data);
                   for(var i=0; i<response.data.length; i++)
                   {  
-                       var contentd = '<div class="card my-3"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
+                       var contentd = '<div class="card my-3"><div class="col-md-4"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
 
-                       contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div>';
+                       contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div></div>';
          
          $('#contentdisplay').append(contentd);
                   }
@@ -174,9 +164,9 @@ Accept: "application/json",
                         console.log(response.data);
                         for(var i=0; i<response.data.length; i++)
                         {  
-                             var contentd = '<div class="card my-3"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
+                             var contentd = '<div class="card my-3"><div class="col-md-4"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
 
-                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div>';
+                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div></div>';
 							 
 							 $('#contentdisplay').append(contentd);
                         }
@@ -199,9 +189,9 @@ Accept: "application/json",
                         console.log(response.data);
                         for(var i=0; i<response.data.length; i++)
                         {  
-                             var contentd = '<div class="card my-3"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
+                             var contentd = '<div class="card my-3"><div class="col-md-4"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
 
-                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div>';
+                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div></div>';
 							 
 							 $('#contentdisplay').append(contentd);
                         }
@@ -224,9 +214,9 @@ Accept: "application/json",
                         console.log(response.data);
                         for(var i=0; i<response.data.length; i++)
                         {  
-                             var contentd = '<div class="card my-3"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
+                             var contentd = '<div class="card my-3"><div class="col-md-4"><div class="card-header"><a class="btn default-link" href="'+response.data[i]['url']+'" target="_blank" ><h3 class="text-dark mb-2">'+response.data[i]['title']+'</h3></a></div>'
 
-                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div>';
+                             contentd += '<div class="card-body"><div class="mt-3 mb-3"><a href="'+response.data[i]['url']+'" target="_blank" ><img class="img-fluid rounded mx-auto d-block" src="'+response.data[i]['img']+'" title="'+response.data[i]['title']+'"/></a></div></div></div></div>';
 							 
 							 $('#contentdisplay').append(contentd);
                         }
