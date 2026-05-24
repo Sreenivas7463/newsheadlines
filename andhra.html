@@ -43,7 +43,7 @@ var url0= "https://sreenewsapi.vercel.app/andhra/"+urlv;
                         console.log(response.data);
 	  
                       var text= response.data[0]['articleBody'];
-	 var textd = text.split(/(?<!\d)\.(?!\d)/).join('.<p class="fs-5 font-monospace"></p>');
+	 var textd = text.split(/(?<!\d)\.(?!\d)/).filter(s => s.trim()).map(s => `<p class="fs-5 font-monospace">${s.trim()}.</p>`).join('');
                              var contentd = '<div class="col-md-8 mx-auto"><div class="card my-3"><div class="card-header"><h5 class="text-dark fs-4 mb-2">'+response.data[0]['title']+'</h5></div>'
 
                              contentd += '<div class="card-body"><img src="'+response.data[0]['img']+'" class="img-fluid" /><div class="mt-3 mb-3">'+textd+'</div></div></div></div>';
